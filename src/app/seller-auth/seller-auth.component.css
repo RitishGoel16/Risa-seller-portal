@@ -1,0 +1,49 @@
+.sign-up, .login{
+    text-align: center;
+}
+
+.sign-up h1, .login h1{
+    color: blueviolet;
+    margin-bottom: 70px;
+    margin-top: 50px;
+}
+.auth-toggle-link{
+    cursor: pointer;
+    padding-top: 20px;
+    font-size: 14px;
+    text-align: left;
+    color: blueviolet;
+}
+
+p {
+  margin: 8px 0;
+}
+
+p[ng-reflect-ng-if], 
+p[ng-reflect-ng-if="false"] {
+  display: none;
+}
+
+/* ✅ Specific style for error message under login */
+.login p {
+  color: #d93025;                  /* Red tone for error */
+  background-color: #fdecea;       /* Light red background */
+  border: 1px solid #f5c6cb;       /* Soft red border */
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ✨ Smooth fade-in effect */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Optional: small shadow for better visibility */
+.login p {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,31 @@
+<div class="product-list">
+  <h1>All Product List</h1>
+  <p class="message-p" *ngIf="productDeletedMessage">{{ productDeletedMessage }}</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Color</th>
+        <th>Description</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of productList">
+        <td><img [src]="product.image" alt="{{ product.name }}" /></td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.category }}</td>
+        <td>{{ product.color }}</td>
+        <td>{{ product.description }}</td>
+        <td>
+          <fa-icon [icon]="faTrash" class="delete-icon" (click)="deleteProduct(product.id)"></fa-icon>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
