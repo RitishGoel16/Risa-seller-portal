@@ -6,9 +6,9 @@ import { SignUp } from '../data-type';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-seller-auth',
-  imports: [CommonModule,FormsModule,],
+  imports: [CommonModule, FormsModule,],
   templateUrl: './seller-auth.component.html',
-  styleUrl: './seller-auth.component.css'
+  styleUrls: ['./seller-auth.component.css']
 })
 export class SellerAuthComponent {
   showLogin = false;
@@ -16,21 +16,21 @@ export class SellerAuthComponent {
   constructor(private seller: SellerService, private router: Router) { }
 
   ngOnInit(): void {
-  if (typeof window !== 'undefined') { // ✅ Only run in browser
-    const sellerData = localStorage.getItem('seller');
-    if (sellerData) {
-      this.seller.setLoginStatus(true);
-      this.router.navigate(['seller-home']);
+    if (typeof window !== 'undefined') { // ✅ Only run in browser
+      const sellerData = localStorage.getItem('seller');
+      if (sellerData) {
+        this.seller.setLoginStatus(true);
+        this.router.navigate(['seller-home']);
+      }
     }
   }
-}
 
-  
+
   signUp(data: SignUp): void {
     this.seller.userSignUp(data).subscribe((result) => {
       if (result) {
         alert('Login successful! 🎉');   // ✅ Show success alert
-        this.seller.setLoginStatus(true); 
+        this.seller.setLoginStatus(true);
         this.router.navigate(['seller-home']);
       }
     });
@@ -45,7 +45,7 @@ export class SellerAuthComponent {
 
     this.seller.userLogin(data).subscribe({
       next: (result: any) => {
-        if (result && result.body && result.body.length > 0) {
+        if (result && result.body ? result.body.length > 0 : result.length > 0) {
           alert('Login successful! 🎉');
           if (typeof window !== 'undefined') {
             localStorage.setItem('seller', JSON.stringify(result.body[0]));
@@ -64,7 +64,7 @@ export class SellerAuthComponent {
       }
     });
   }
-   
+
   showLoginError(message: string): void {
     this.loginError = message;
     setTimeout(() => {

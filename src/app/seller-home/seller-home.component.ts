@@ -3,12 +3,13 @@ import { ProductService } from '../services/product.service';
 import { Product } from '../data-type';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faTrash,faEdit } from '@fortawesome/free-solid-svg-icons';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-seller-home',
   standalone: true, // ✅ optional but good for Angular 16+
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [RouterModule,CommonModule, FontAwesomeModule],
   templateUrl: './seller-home.component.html',
   styleUrls: ['./seller-home.component.css']
 })
@@ -16,6 +17,7 @@ export class SellerHomeComponent {
   productDeletedMessage?: string;
   productList?: Product[];
   faTrash = faTrash; // ✅ rename for clarity
+  UpdateIcon = faEdit; // Example icon for update action
   private deleteMessageTimeout?: ReturnType<typeof setTimeout>;
 
   constructor(private product: ProductService) {}

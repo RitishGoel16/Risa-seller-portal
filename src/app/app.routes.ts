@@ -5,6 +5,7 @@ import { NotFoundComponentComponent } from './not-found-component/not-found-comp
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { authGuard } from './auth.guard';
 import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
+import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 
 export const routes: Routes = [
    {
@@ -21,8 +22,13 @@ export const routes: Routes = [
       canActivate: [authGuard]
    },
    {
-      path: 'seller-add-product',   
+      path: 'seller-add-product',
       component: SellerAddProductComponent,
+      canActivate: [authGuard]
+   },
+   {
+      path: 'seller-update-product',
+      component: SellerUpdateProductComponent,
       canActivate: [authGuard]
    },
    {

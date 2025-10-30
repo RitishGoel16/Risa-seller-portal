@@ -43,6 +43,15 @@
       "color": "Red",
       "description": "This is only one in the world",
       "image": "https://images.pexels.com/photos/3766180/pexels-photo-3766180.jpeg?_gl=1*10jxodf*_ga*MTEzMzg5OTMwMC4xNzYxNTQ4NzMz*_ga_8JE65Q40S6*czE3NjE1NDg3MzIkbzEkZzEkdDE3NjE1NDg3NTEkajQxJGwwJGgw"
+    },
+    {
+      "id": "6fef",
+      "name": "s",
+      "price": "s",
+      "category": "s",
+      "color": "s",
+      "description": "s",
+      "image": "https://assets.leetcode.com/static_assets/others/lg2550.png"
     }
   ]
 }

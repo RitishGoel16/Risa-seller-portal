@@ -33,7 +33,7 @@ export class SellerService {
 
   setLoginStatus(status: boolean) {
     this.isSellerLoggedIn.next(status);
-    if (this.isBrowser) { 
+    if (this.isBrowser) {
       localStorage.setItem('sellerLoggedIn', String(status));
     }
   }
