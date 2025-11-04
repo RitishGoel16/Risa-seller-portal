@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-seller-auth',
   imports: [CommonModule, FormsModule,],
+  standalone: true,
   templateUrl: './seller-auth.component.html',
   styleUrls: ['./seller-auth.component.css']
 })

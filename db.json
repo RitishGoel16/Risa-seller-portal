@@ -27,13 +27,13 @@
   ],
   "products": [
     {
-      "id": "4705",
       "name": "Cream And Lotion",
-      "price": 599,
+      "price": "4999",
       "category": "Electronics",
-      "color": "White",
+      "color": "Cream",
       "description": "This is only one in the world",
-      "image": "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtMzYyLTAxYS1tb2NrdXAuanBn.jpg"
+      "image": "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtMzYyLTAxYS1tb2NrdXAuanBn.jpg",
+      "id": "4705"
     },
     {
       "id": "470324",

@@ -26,3 +26,11 @@ font-family: sans-serif;
     cursor: pointer;
 
 }
+.carousel-caption h3{
+    color: #00000082;
+    border-radius: 5px;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black;
+    border-radius: 5px;
+}

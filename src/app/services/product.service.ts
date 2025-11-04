@@ -29,4 +29,13 @@ export class ProductService {
   deleteProduct(id: number){
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
+  getProduct(id: String) {
+    return this.http.get<Product[]>(`${this.apiUrl}?sellerId=${id}`);
+  }
+  updateProduct(product: Product) {
+    return this.http.put<Product>(`${this.apiUrl}/${product.id}`, product);
+  }
+  popularProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.apiUrl}?_limit=3`);
+  }
 }

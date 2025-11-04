@@ -5,3 +5,9 @@
     color: blueviolet;
     
 }
+
+.message-p{
+    color: green;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
