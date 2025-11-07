@@ -36,6 +36,13 @@ export class ProductService {
     return this.http.put<Product>(`${this.apiUrl}/${product.id}`, product);
   }
   popularProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.apiUrl}?_limit=3`);
+    return this.http.get<Product[]>(`${this.apiUrl}?_limit=4`);
   }
+  trendyProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>('http://localhost:3000/products?_limit=8');
+  }
+  SearchProducts(query:string): Observable<Product[]> {
+    return this.http.get<Product[]>('http://localhost:3000/products?q=${query}');
+  }
+  
 }

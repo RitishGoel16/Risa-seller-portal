@@ -20,11 +20,16 @@ export class HomeComponent {
 constructor( private product:ProductService) { }
 
   popularProducts : undefined | Product[];
+  trendyProducts : undefined | Product[];
 
   ngOnInit(): void {
     this.product.popularProducts().subscribe((data)=>{
       console.log(data);
       this.popularProducts = data;
     })
+    this.product.trendyProducts().subscribe((data)=>{
+      this.trendyProducts = data;
+      console.log(data);
+    });
   }
 }

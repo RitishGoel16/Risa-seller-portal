@@ -2,6 +2,8 @@ import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { SellerService } from '../services/seller.service';
+import { ProductService } from '../services/product.service';
+import { Product } from '../data-type';
 
 @Component({
   selector: 'app-header',
@@ -13,10 +15,11 @@ export class HeaderComponent {
   sellerName: string = '';
   private isBrowser: boolean;
   menuType: String = 'default';
-
+  searchResult: undefined | Product[];
   constructor(
     private router: Router,
     private seller: SellerService,
+    private product: ProductService,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
     this.isBrowser = isPlatformBrowser(this.platformId);
@@ -26,6 +29,21 @@ export class HeaderComponent {
     this.seller.logout(); // clears BehaviorSubject & localStorage
     this.sellerName = ''; // clear UI name
     this.menuType = 'default';
+  }
+
+  SearchProducts(query: KeyboardEvent) {
+    if (query) {
+      const element = query.target as HTMLInputElement;
+      console.log(element.value);
+      this.product.SearchProducts(element.value).subscribe((data) => {
+        console.log(data);
+        this.searchResult = data;
+      });
+    }
+  }
+
+  hideSearch() {
+    this.searchResult = undefined;
   }
 
   ngOnInit(): void {
@@ -40,7 +58,7 @@ export class HeaderComponent {
         }
         else {
           this.menuType = 'default';
-        } 
+        }
       }
     });
   }

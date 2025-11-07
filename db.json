@@ -32,7 +32,7 @@
       "category": "Electronics",
       "color": "Cream",
       "description": "This is only one in the world",
-      "image": "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtMzYyLTAxYS1tb2NrdXAuanBn.jpg",
+      "image": "https://www.befunky.com/images/wp/wp-2018-08-product-photography-18.jpg?auto=avif,webp&format=jpg&width=944",
       "id": "4705"
     },
     {
@@ -42,16 +42,25 @@
       "category": "Clothing",
       "color": "Red",
       "description": "This is only one in the world",
-      "image": "https://images.pexels.com/photos/3766180/pexels-photo-3766180.jpeg?_gl=1*10jxodf*_ga*MTEzMzg5OTMwMC4xNzYxNTQ4NzMz*_ga_8JE65Q40S6*czE3NjE1NDg3MzIkbzEkZzEkdDE3NjE1NDg3NTEkajQxJGwwJGgw"
+      "image": "https://sb.kaleidousercontent.com/67418/1920x1100/3a96a6f97b/transparent.png"
     },
     {
       "id": "6fef",
-      "name": "s",
-      "price": "s",
-      "category": "s",
-      "color": "s",
-      "description": "s",
-      "image": "https://assets.leetcode.com/static_assets/others/lg2550.png"
+      "name": "Sony",
+      "price": "25000",
+      "category": "Electronics",
+      "color": "black",
+      "description": "Best quality product",
+      "image": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?_gl=1*1mtixhz*_ga*MTAxMjIxNzIyOC4xNzYyNTExMTIz*_ga_8JE65Q40S6*czE3NjI1MTExMjMkbzEkZzEkdDE3NjI1MTExMjckajU2JGwwJGgw"
+    },
+    {
+      "id": "47032",
+      "name": "Nika",
+      "price": "2500",
+      "category": "beauty",
+      "color": "Red",
+      "description": "Best quality product",
+      "image": "https://b2861582.smushcdn.com/2861582/wp-content/uploads/2023/02/splash-03-605-v1.png?lossy=2&strip=1&webp=1"
     }
   ]
 }

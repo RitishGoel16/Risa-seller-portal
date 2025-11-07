@@ -2,10 +2,24 @@
 body{
 font-family: sans-serif;
 }
-.container{
-    margin-left: 5%;
-    margin-right: 5%;
+
+/* Apply same styling to both container and container-fluid */
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+  margin-left: 5% !important;
+  margin-right: 5% !important;
+  width: 90% !important;
+  max-width: 90% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
+
+
 .common-form{
     text-align: center;
     display: flex;
