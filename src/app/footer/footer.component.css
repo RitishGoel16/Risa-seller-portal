@@ -1,0 +1,90 @@
+/* 🌟 FOOTER STYLING */
+.amazon-footer {
+  margin-top: 40px;
+  background-color: #232f3e;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.footer-top {
+  background-color: #37475a;
+  text-align: center;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+
+.back-to-top-btn {
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none; /* 🚫 removes underline */
+  font-weight: 500;
+}
+
+.back-to-top-btn:hover {
+  text-decoration: none;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 30px 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-column {
+  width: 220px;
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-column ul li a:hover {
+  color: #f3a847;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.footer-top:hover {
+  background-color: #485769;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

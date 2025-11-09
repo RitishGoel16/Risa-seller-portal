@@ -34,16 +34,33 @@ export class HeaderComponent {
   SearchProducts(query: KeyboardEvent) {
     if (query) {
       const element = query.target as HTMLInputElement;
-      console.log(element.value);
+      const value = element.value.trim().toLowerCase();
+      if (!value) {
+      this.searchResult = undefined; // Hide suggestions if input empty
+      return;
+    }
       this.product.SearchProducts(element.value).subscribe((data) => {
         console.log(data);
-        this.searchResult = data;
+        if(data.length>5){
+          data.length=5;
+        }
+        
+        // this.searchResult = data;
+        this.searchResult = data.filter((product: Product) =>
+          product.name.toLowerCase().includes(element.value.toLowerCase()) ||
+          product.category.toLowerCase().includes(element.value.toLowerCase())
+        );
       });
     }
   }
 
   hideSearch() {
     this.searchResult = undefined;
+  }
+
+  submitSearch(val:string){
+    console.warn(val);
+    this.router.navigate([`/search/${val}`]);
   }
 
   ngOnInit(): void {

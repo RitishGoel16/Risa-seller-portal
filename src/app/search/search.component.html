@@ -1,0 +1,51 @@
+<!-- <div class="row search-item" *ngFor="let item of searchresult">
+    <div class="col-sm-3">
+        <img src="{{item.image}}" alt="">
+    </div>
+    <div class="col-sm-8 details">
+        <h6>{{item.name}}</h6>
+        <p><b>price:{{item.price}}</b></p>
+        <p><span>color:red</span><span>{{item.category}}</span></p>
+        <p>{{item.description}}</p>
+    </div>
+</div>
+
+<div *ngIf="searchresult && !searchresult.length" class="no-results">
+  <p>No products found for this search.</p>
+</div> -->
+
+<div class="amazon-style-container">
+  <div class="amazon-product" *ngFor="let item of searchresult">
+    <div class="amazon-product-image">
+      <img [src]="item.image" alt="{{ item.name }}">
+    </div>
+
+    <div class="amazon-product-info">
+      <h5 class="product-title">{{ item.name }}</h5>
+
+      <div class="rating-row">
+        ⭐⭐⭐⭐☆ <span class="rating-count">(4.1K)</span>
+      </div>
+
+      <div class="price-row">
+        <span class="price">₹{{ item.price }}</span>
+        <span class="mrp">M.R.P: <s>₹{{ item.price * 1.8 | number: '1.0-0' }}</s></span>
+        <span class="discount">(52% off)</span>
+      </div>
+
+      <p class="product-category">Category: {{ item.category | titlecase }}</p>
+      <p class="product-description">{{ item.description }}</p>
+
+      <div class="delivery-info">
+        <p>FREE delivery as soon as <b>Tue, 12 Nov</b></p>
+        <p>Service: <b>Installation available</b></p>
+      </div>
+
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <div *ngIf="searchresult && !searchresult.length" class="no-results">
+    <p>No products found for this search.</p>
+  </div>
+</div>
