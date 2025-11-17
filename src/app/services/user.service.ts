@@ -20,6 +20,10 @@ export class UserService {
       }
     });
   }
+
+  userLogin(data: SignUp){
+    this.http.get(`http://localhost:3000/Users?email=${data.email}&pasword=${data.password}`)
+  }
   userAuthReload(){
     if(localStorage.getItem('user')){
       this.router.navigate(['/']);
