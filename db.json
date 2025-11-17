@@ -28,7 +28,7 @@
   "products": [
     {
       "name": "Cream And Lotion",
-      "price": "4999",
+      "price": "499",
       "category": "Electronics",
       "color": "Cream",
       "description": "This is only one in the world",
@@ -61,6 +61,38 @@
       "color": "pink",
       "description": "Best quality product",
       "image": "https://b2861582.smushcdn.com/2861582/wp-content/uploads/2023/02/splash-03-605-v1.png?lossy=2&strip=1&webp=1"
+    }
+  ],
+  "Users": [
+    {
+      "id": "8801",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "8826",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "af4b",
+      "name": "Ritish goel",
+      "email": "sachinkaushik@weathersysbkc.com",
+      "password": "qq"
+    },
+    {
+      "id": "419a",
+      "name": "Ritish goel",
+      "email": "ritishgoel2002@gmail.com",
+      "password": "11"
+    },
+    {
+      "id": "dec2",
+      "name": "Ritish goel",
+      "email": "sachinkaushik@weathersysbkc.com",
+      "password": "q"
     }
   ]
 }

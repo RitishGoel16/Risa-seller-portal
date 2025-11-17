@@ -1,6 +1,14 @@
 /* 🌟 FOOTER STYLING */
+/* footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+} */
+
 .amazon-footer {
-  margin-top: 40px;
+  margin-top: 40px;   /* gives internal spacing, does NOT push footer down */
+  bottom: 0 !important;
   background-color: #232f3e;
   color: #fff;
   font-family: Arial, sans-serif;

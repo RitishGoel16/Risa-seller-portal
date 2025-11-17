@@ -1,4 +1,5 @@
 export interface SignUp {
+  id: number;
   name: string,
   email: string,
   password: string

@@ -16,6 +16,7 @@ export class HeaderComponent {
   private isBrowser: boolean;
   menuType: String = 'default';
   searchResult: undefined | Product[];
+  userName: string = '';
   constructor(
     private router: Router,
     private seller: SellerService,
@@ -29,6 +30,10 @@ export class HeaderComponent {
     this.seller.logout(); // clears BehaviorSubject & localStorage
     this.sellerName = ''; // clear UI name
     this.menuType = 'default';
+  }
+  userLogout() {
+    localStorage.removeItem('user');
+    this.router.navigate(['/user-auth']);
   }
 
   SearchProducts(query: KeyboardEvent) {
@@ -62,7 +67,10 @@ export class HeaderComponent {
     console.warn(val);
     this.router.navigate([`/search/${val}`]);
   }
-
+  
+  redirectToDetails(id:number){
+    this.router.navigate(['/details/'+id])
+  }
   ngOnInit(): void {
     this.router.events.subscribe((val: any) => {
       if (val.url && this.isBrowser) {
@@ -72,6 +80,11 @@ export class HeaderComponent {
           this.menuType = 'seller';
           const sellerObj = JSON.parse(sellerData);
           this.sellerName = sellerObj.name || sellerObj.username || '';
+        }else if (localStorage.getItem('user')){
+          let userStorage = localStorage.getItem('user');
+          let userData = userStorage && JSON.parse(userStorage);
+          this.userName = userData.name;
+          this.menuType = 'user';
         }
         else {
           this.menuType = 'default';

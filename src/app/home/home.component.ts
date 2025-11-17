@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductService } from '../services/product.service';
 import { Product } from '../data-type';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,22 +13,23 @@ import { Product } from '../data-type';
     CommonModule,
     FormsModule,
     NgbCarouselModule,
+    RouterModule,
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-constructor( private product:ProductService) { }
+  constructor(private product: ProductService) { }
 
-  popularProducts : undefined | Product[];
-  trendyProducts : undefined | Product[];
+  popularProducts: undefined | Product[];
+  trendyProducts: undefined | Product[];
 
   ngOnInit(): void {
-    this.product.popularProducts().subscribe((data)=>{
+    this.product.popularProducts().subscribe((data) => {
       console.log(data);
       this.popularProducts = data;
     })
-    this.product.trendyProducts().subscribe((data)=>{
+    this.product.trendyProducts().subscribe((data) => {
       this.trendyProducts = data;
       console.log(data);
     });

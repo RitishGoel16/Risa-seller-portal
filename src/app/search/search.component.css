@@ -102,6 +102,60 @@
   height: 180px;
   object-fit: contain;
 }
+/* .amazon-style-container {
+  position: relative;
+}
+
+.amazon-product {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+}
+
+.amazon-product-image {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  cursor: crosshair;
+}
+
+.amazon-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.amazon-product-info {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.price-row {
+  margin-top: 6px;
+}
+
+.add-to-cart-btn {
+  background-color: #ffd814;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.zoom-window {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #ddd;
+  background-repeat: no-repeat;
+  background-size: 200%;
+  z-index: 999;
+  pointer-events: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+} */
 
 .amazon-product-info {
   flex: 1;
